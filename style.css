@@ -1,0 +1,410 @@
+/* Global Variabel */
+:root{
+  --main-color : #FF5C5C;
+  --main-color-hover : #f83232;
+  --dark-color : #3c4542;
+  --container-width : 1100px;
+}
+
+/* Global Style */
+* {
+  box-sizing: border-box;
+}
+html, body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+h1 {
+  padding: 0;
+  margin: 0;
+  font-size: 2rem;
+  text-shadow: 2px 2px 3px silver;
+}
+.button {
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 1.3em;
+  padding: 0.7em 1.2em;
+  background-color: var(--main-color);
+  color: white;
+  box-shadow: 5px 5px black;
+  font-size: 1.1em;
+}
+.button:hover {
+  background-color: var(--main-color-hover);
+}
+
+/* =================== */
+/* HEADER DAN NAVIGASI */
+/* =================== */
+
+.nav-container {
+  background-color: var(--dark-color);
+  position: sticky;
+  top: 0px;
+  z-index: 100;
+}
+.nav-container header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 80vw;
+  height: 60px;
+  margin: 0 auto;
+}
+.nav-container .logo img {
+  width: 120px;
+  padding-top: 10px;
+}
+.nav-container ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+.nav-container li a {
+  display: block;
+  color: white;
+  padding: 0 1.1em;
+  text-decoration: none;
+  text-transform: uppercase;
+  height: 60px;
+  line-height: 60px;
+}
+.nav-container li a:hover{
+  color: var(--main-color);
+  transition: all 0.3s;
+  border-bottom: 5px solid var(--main-color);
+}
+/* Sembunyikan hamburger icon */
+.nav-container header label, #hamburger {
+  display: none;
+}
+
+/* ==== */
+/* HERO */
+/* ==== */
+
+.hero-container {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1),
+                    rgba(0, 0, 0, 0.3)), url("img/hero.jpg");
+  height: 70vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-text {
+  text-align: center;
+  color: white;
+}
+.hero-text h1{
+  font-size: 4em;
+  text-shadow: 4px 4px black;
+}
+.hero-text p{
+  font-size: 2em;
+  margin: 0;
+  text-shadow: 2px 2px black;
+}
+
+/* ================== */
+/*      SHOWCASE      */
+/* ================== */
+
+.showcase-container:nth-child(even) {
+  background-color: #f0f0f0;
+}
+.showcase {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2em;
+}
+.showcase-image, .showcase-text{
+  width: 50%;
+  margin: 1em;
+}
+.showcase-image img{
+  width: 100%;
+  border: 1px solid silver;
+  padding: 0.3rem;
+  box-shadow: 2px 2px 5px black;
+}
+
+/* ================== */
+/* PRUDCT AND SERVICE */
+/* ================== */
+
+.product-container {
+  max-width: var(--container-width);
+  margin: 3rem auto;
+  text-align: center;
+}
+.product-container header hr {
+  width: 25%;
+  border: 0;
+  border-top: 1px solid #ddd;
+}
+.product-container section {
+  margin-top: 2rem;
+  display: flex;
+  flex-flow: row wrap;
+}
+.product-container section div {
+  width: 25%;
+  padding: 1em 2em;
+}
+
+/* ============== */
+/*     EXPLORE    */
+/* ============== */
+
+.explore-container {
+  padding: 0 2em;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4),
+                    rgba(0, 0, 0, 0.6)), url("img/hero.jpg");
+  text-align: center;
+  color: white;
+}
+.explore-text {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 3rem 0;
+}
+.explore-text p {
+  font-size: 1.3rem;
+  text-shadow: 1px 1px 2px black;
+}
+.explore-text h1 {
+  text-shadow: 1px 1px 2px black;
+}
+
+/* ==================== */
+/*      BLOG INDEX      */
+/* ==================== */
+
+.blog-container {
+  max-width: var(--container-width);
+  margin: 3rem auto;
+}
+.blog-container header {
+  padding: 0 2em;
+  text-align: center;
+}
+.blog-container header hr {
+  width: 25%;
+  border: 0;
+  border-top: 1px solid #ddd;
+}
+.blog-index {
+  margin-top: 1rem;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content:space-between;
+  padding: 0 2%;
+}
+.blog-index .snippet {
+  width: 32%;
+  margin-top: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 0.25rem;
+}
+.blog-index .snippet-img {
+  width: 100%;
+}
+.blog-index .snippet-txt {
+  padding: 0 1em;
+}
+.blog-index .snippet-txt small {
+  color: #999;
+}
+
+/* Efek untuk hover gambar */
+.snippet figure {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  overflow: hidden;
+}
+.snippet-img {
+  transform: rotate(10deg) scale(1.4);
+  transition: .3s ease-in-out;
+}
+.snippet figure:hover img {
+  transform: rotate(0) scale(1.1);
+}
+
+/* ============= */
+/*     FOOTER    */
+/* ============= */
+
+.footer-container {
+  margin-top: 3rem;
+  color: white;
+  background-color: var(--dark-color);
+  padding: 2rem 1rem;
+}
+.footer-container a{
+  text-decoration: none;
+  color: white;
+}
+.footer-container a:hover{
+  text-decoration: underline;
+}
+.footer-menu{
+  max-width: var(--container-width);
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+.footer-menu section {
+  width: 23%;
+  text-align: center;
+}
+.footer-menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.footer-menu h3{
+  margin-top: 0;
+}
+.logo-container img {
+  width: 65px;
+}
+.footer-copyright {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  padding: 0.5rem;
+}
+.footer-copyright a {
+  margin-left: 0.5rem;
+}
+.footer-copyrighta:hover {
+  text-decoration: none;
+}
+
+/* ================= */
+/* BREAKPOINT TABLET */
+/* ================= */
+
+@media screen and (max-width: 768px) {
+
+/*==== HEADER DAN NAVIGASI ==== */
+
+/* /* Tampilkan gamburger icon  */
+.nav-container header label {
+    display: inline-block;
+    color: white;
+    font-style: normal;
+    font-size: 2rem;
+    padding: 0.5rem;
+    padding-left: 1rem;
+}
+
+/* Susun ulang menu menjadi vertikal */
+.nav-container header {
+    width: 100%;
+}
+.nav-container nav ul {
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+}
+.nav-container li a {
+    display: block;
+    color: white;
+    background-color: var(--dark-color);
+    padding: 0 2em;
+    text-decoration: none;
+    text-transform: uppercase;
+    height: auto;
+}
+.nav-container li a:hover {
+    border-bottom: none;
+}
+
+/* Pindahkan posisi logo ke kanan, dan perkecil */
+.nav-container .logo {
+    position: absolute;
+    right: 20px;
+    z-index: 1000;
+}
+.nav-container .logo img {
+    width: 80px;
+}
+
+/* Untuk menampilkan / menyembunyikan menu */
+.nav-container nav { display: none; }
+.nav-container header input:checked ~ nav {
+    display: flex;
+}
+
+/*==== SHOWCASE ====*/
+.showcase {
+    flex-direction: column;
+    padding: 1em 2em ;
+}
+.showcase-image, .showcase-text{
+    width: auto;
+}
+
+/*==== PRODUCT ====*/
+.product-container section div {
+    width: 50%;
+}
+
+/*==== BLOG UPDATE ====*/
+.blog-container .snippet {
+    width: 48%;
+}
+
+/*==== FOOTER ====*/
+.footer-menu section {
+    width: 48%;
+}
+}
+
+/* ===================== */
+/* BREAKPOINT SMARTPHONE */
+/* ===================== */
+@media screen and (max-width: 481px){
+
+/*==== SERVICES ====*/
+.product-container section div {
+    width: 100%;
+}
+
+/*==== BLOG UPDATE ====*/
+.blog-container .snippet {
+    width: 98%;
+}
+.blog-index {
+    justify-content:center;
+}
+
+/*==== FOOTER ====*/
+.footer-menu section {
+    width: 98%;
+    margin-top: 1rem;
+}
+.footer-copyright {
+    margin-top: 1rem;
+    justify-content: center;
+}
+}
